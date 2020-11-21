@@ -28,13 +28,13 @@ public class PersonController {
     }
 
     @RequestMapping(method = RequestMethod.PUT)
-    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseStatus(HttpStatus.CREATED)
     public Person updatePerson(@RequestBody Person person){
         return personService.update(person);
     }
 
     @RequestMapping(method = RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.ACCEPTED)
     public void deletePerson(@RequestParam("id") String id){
          personService.delete(id);
     }
